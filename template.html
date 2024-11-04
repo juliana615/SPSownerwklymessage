@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 0 150px 20px;
+        border: 1px solid #dddddd;
+      }
+      .logo {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header {
+        font-size: 18px;
+        color: #333333;
+        /* text-align: center; */
+        margin-bottom: 20px;
+      }
+      .columns {
+        display: flex;
+        justify-content: space-around;
+        /* margin-bottom: 20px; */
+      }
+      .column {
+        width: 45%;
+        text-align: center;
+      }
+      .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid black;
+        display: inline-block;
+        line-height: 50px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px;
+      }
+      .dark-green {
+        background-color: #26C26E;
+      }
+      .dark-yellow {
+        background-color: #EBB31F;
+      }
+      .dark-red {
+        background-color: #EB2A2E;
+      }
+      .footer-text {
+        /* text-align: center; */
+        font-size: 12px;
+        color: #999999;
+        padding-top: 20px;
+      }
+      .button {
+        display: block;
+        /* width: 200px; */
+        text-align: center;
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-decoration: none;
+        margin: 10px auto;
+        border-radius: 5px;
+      }
+      .square {
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+        /* margin: 10px auto; */
+        display: inline-block;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+      }
+      .link {
+        color: black;
+      }
+      .d-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="container" cellpadding="0" cellspacing="0">
+      <!-- Logo -->
+      <tr>
+        <td>
+          <img src="" style="aspect-ratio: 8/3;" alt="Company Logo" class="logo" onerror="this.src='https://placehold.co/800x300/png'"/>
+        </td>
+      </tr>
+      <!-- Greeting Line -->
+      <tr>
+        <td class="header">Hi [Company Name],</td>
+      </tr>
+      <!-- Text Line -->
+      <tr>
+        <td style="padding: 10px 0;">
+          Your [Data] for Week Ending:
+        </td>
+      </tr>
+      <!-- 2 Columns -->
+      <tr>
+        <td class="columns">
+          <div class="column">
+            <div>[From Date]</div>
+            <div class="circle dark-green"><strong>74</strong></div>
+          </div>
+          <div class="column">
+            <div>[To Date]</div>
+            <div class="circle dark-yellow"><strong>65</strong></div>
+          </div>
+        </td>
+      </tr>
+      <!-- Text Line -->
+      <tr>
+        <td>
+          Your [Data Elements] are:
+        </td>
+      </tr>
+      <!-- Circles -->
+      <tr>
+        <td class="columns">
+          <div class="column">
+            <div class="circle dark-yellow"><strong>65</strong></div>
+          </div>
+          <div class="column">
+            <div class="circle dark-red"><strong>55</strong></div>
+          </div>
+        </td>
+      </tr>
+      <!-- Text Line with Increased/Decreased -->
+      <tr>
+        <td>
+          Value of [Data Elements]: <strong class="d-none" style="color: red;">Decreased</strong><strong class="" style="color: green;">Increased</strong>.
+        </td>
+      </tr>
+      <!-- Square Boxes -->
+      <tr>
+        <td class="columns">
+          <div class="column">
+            <div class="square dark-green"><strong>1547</strong></div>
+          </div>
+          <div class="column">
+            <div class="square dark-red"><strong>4542</strong></div>
+          </div>
+        </td>
+      </tr>
+      <!-- Text Line -->
+      <tr>
+        <td>
+          <p>You are doing well. Keep your [Data Elements] <strong>low</strong>.</p>
+        </td>
+      </tr>
+      <!-- Button -->
+      <tr>
+        <td>
+          <a href="" class="button">Request a Previous 4 Week Report</a>
+        </td>
+      </tr>
+      <!-- Footer Text -->
+      <tr>
+        <td class="footer-text">
+          Powered by [Company Name]
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
