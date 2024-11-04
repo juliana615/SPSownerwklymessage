@@ -44,11 +44,13 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        border: 2px solid black;
-        display: inline-block;
-        line-height: 50px;
+        border: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* line-height: 50px; */
+        /* text-align: center; */
         color: white;
-        text-align: center;
         font-size: 20px;
         margin: 10px;
         padding: 10px;
@@ -62,6 +64,21 @@
       .dark-red {
         background-color: #EB2A2E;
       }
+      .light-green {
+        background-color: lightgreen;
+      }
+      .light-blue {
+        background-color: lightblue;
+      }
+      .light-orange {
+        /* background-color: #FFCC99; */
+        background-color: rgba(255, 165, 0, 0.5);
+      }
+      .light-red {
+        /* background-color: #FF6666; */
+        background-color: rgba(255, 0, 0, 0.4);
+      }
+
       .footer-text {
         /* text-align: center; */
         font-size: 12px;
@@ -82,7 +99,7 @@
       .square {
         width: 50px;
         height: 50px;
-        border: 2px solid black;
+        border: 2px solid white;
         /* margin: 10px auto; */
         display: inline-block;
         text-align: center;
@@ -99,18 +116,19 @@
         display: none;
       }
       .circle.left {
-        width: 60px!important;
-        height: 60px!important;
+        width: 65px!important;
+        height: 65px!important;
       }
       .square.left {
-        width: 60px!important;
-        height: 60px!important;
+        width: 65px!important;
+        height: 65px!important;
       }
       .title {
         text-align: center;
       }
       .explanation {
         font-size: 12px;
+        border: 1px solid black;
       }
     </style>
   </head>
@@ -120,7 +138,7 @@
       <tr>
         <td>
           <!-- <img src="[custlogo]" style="aspect-ratio: 8/3;" alt="Company Logo" class="logo" onerror="this.src='https://placehold.co/800x300/png'"/> -->
-           <h2 class="title">Weekly Risk Report</h2>
+           <h2 class="title">[Report's Title]</h2>
         </td>
       </tr>
       <!-- Greeting Line -->
@@ -130,7 +148,7 @@
       <!-- Text Line -->
       <tr>
         <td style="padding: 10px 0;">
-          Your Risk Score for Week Ending:
+          Your <strong>Risk</strong> Scores for Week Ending:
         </td>
       </tr>
       <!-- 2 Columns -->
@@ -149,7 +167,7 @@
       <!-- Text Line -->
       <tr>
         <td>
-          Your Speed Scores are:
+          Your <strong>Speed</strong> Score [improved]
         </td>
       </tr>
       <!-- Circles -->
@@ -163,10 +181,52 @@
           </div>
         </td> 
       </tr>
+      <!-- Incident 1 -->
+      <tr>
+        <td>
+          % of Incidents <strong>75+ MPH</strong>
+        </td>
+      </tr>
+      <!-- Incident 1 Circles -->
+      <tr>
+        <td class="columns">
+          <div class="column">
+            <div class="circle left light-red">
+              <span style="text-align: center; line-height: 1.4; color: [color1];">[value1]<br>%</span>
+            </div>
+          </div>
+          <div class="column">
+            <div class="circle right light-red">
+              <span style="text-align: center; line-height: 1.2; color: [color2];">[value2]<br>%</span>
+            </div>
+          </div>
+        </td> 
+      </tr>
+      <!-- Incident 2 -->
+      <tr>
+        <td>
+          % of Incidents <strong>15+ MPH</strong> Over Limit
+        </td>
+      </tr>
+      <!-- Incident 2 Circles -->
+      <tr>
+        <td class="columns">
+          <div class="column">
+            <div class="circle left light-red">
+              <span style="text-align: center; line-height: 1.4; color: [color3];">[value3]<br>%</span>
+            </div>
+          </div>
+          <div class="column">
+            <div class="circle right light-red">
+              <span style="text-align: center; line-height: 1.2; color: [color4];">[value4]<br>%</span>
+            </div>
+          </div>
+        </td> 
+      </tr>
       <!-- Text Line with Increased/Decreased -->
       <tr>
         <td>
-          Number of Speeding Incidents: <strong style="[spdinciddircolor]">[spdinciddir]</strong>.
+          Speeding Incidents count <strong style="[spdinciddircolor]">[spdinciddir]</strong>.
         </td>
       </tr>
       <!-- Square Boxes -->
@@ -183,7 +243,7 @@
       <!-- Text Line -->
       <tr>
         <td>
-          <p>[speedactiont].</p>
+          <p>Please <strong>[speedactiont]</strong> your speeding incidents.</p>
         </td>
       </tr>
       <!-- Button -->
@@ -192,11 +252,16 @@
           <a href="[formlink]" class="button">Request a Previous 4 Week Report</a>
         </td>
       </tr>
-      <tr>
+      <tr style="margin-bottom: 10px;">
         <td class="explanation">
           <p style="margin: 4px;"><span style="color: red;">RED</span> - Danger Zone Lower your speed</p>
           <p style="margin: 4px;"><span style="color: orange;">ORANGE</span> - Improvements needed</p>
           <p style="margin: 4px;"><span style="color: green;">GREEN</span> - Thank you continue to drive down incidents count</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-size: 12px; padding-top: 10px;">
+          Score 0 to 100 based on driver's performances higher score is better.
         </td>
       </tr>
       <!-- Footer Text -->
