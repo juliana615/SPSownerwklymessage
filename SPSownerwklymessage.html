@@ -4,270 +4,351 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Template</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: #ffffff;
-        padding: 0 150px 20px;
-        border: 1px solid #dddddd;
-      }
-      .logo {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .header {
-        font-size: 18px;
-        color: #333333;
-        /* text-align: center; */
-        margin-bottom: 20px;
-      }
-      .columns {
-        display: flex;
-        justify-content: space-around;
-        /* margin-bottom: 20px; */
-      }
-      .column {
-        width: 45%;
-        text-align: center;
-      }
-      .circle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* line-height: 50px; */
-        /* text-align: center; */
-        color: white;
-        font-size: 20px;
-        margin: 10px;
-        padding: 10px;
-      }
-      .dark-green {
-        background-color: #26C26E;
-      }
-      .dark-yellow {
-        background-color: #EBB31F;
-      }
-      .dark-red {
-        background-color: #EB2A2E;
-      }
-      .light-green {
-        background-color: lightgreen;
-      }
-      .light-blue {
-        background-color: lightblue;
-      }
-      .light-orange {
-        /* background-color: #FFCC99; */
-        background-color: rgba(255, 165, 0, 0.5);
-      }
-      .light-red {
-        /* background-color: #FF6666; */
-        background-color: rgba(255, 0, 0, 0.4);
-      }
-
-      .footer-text {
-        /* text-align: center; */
-        font-size: 12px;
-        color: #999999;
-        padding-top: 20px;
-      }
-      .button {
-        display: block;
-        /* width: 200px; */
-        text-align: center;
-        background-color: #4caf50;
-        color: white;
-        padding: 15px;
-        text-decoration: none;
-        margin: 10px auto;
-        border-radius: 5px;
-      }
-      .square {
-        width: 50px;
-        height: 50px;
-        border: 2px solid white;
-        /* margin: 10px auto; */
-        display: inline-block;
-        text-align: center;
-        line-height: 50px;
-        font-size: 20px;
-        color: white;
-        margin: 10px;
-        padding: 10px;
-      }
-      .link {
-        color: black;
-      }
-      .d-none {
-        display: none;
-      }
-      .circle.left {
-        width: 65px!important;
-        height: 65px!important;
-      }
-      .square.left {
-        width: 65px!important;
-        height: 65px!important;
-      }
-      .title {
-        text-align: center;
-      }
-      .explanation {
-        font-size: 12px;
-        border: 1px solid black;
-      }
-    </style>
   </head>
-  <body>
-    <table class="container" cellpadding="0" cellspacing="0">
-      <!-- Logo -->
+  <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
       <tr>
-        <td>
-          <!-- <img src="[custlogo]" style="aspect-ratio: 8/3;" alt="Company Logo" class="logo" onerror="this.src='https://placehold.co/800x300/png'"/> -->
-           <h2 class="title">Weekly Risk Report</h2>
-        </td>
-      </tr>
-      <!-- Greeting Line -->
-      <tr>
-        <td class="header">Hi [coname],</td>
-      </tr>
-      <!-- Text Line -->
-      <tr>
-        <td style="padding: 10px 0;">
-          Your <strong>Risk</strong> Scores for Week Ending:
-        </td>
-      </tr>
-      <!-- 2 Columns -->
-      <tr>
-        <td class="columns">
-          <div class="column">
-            <div><strong>[curdwe]</strong></div>
-            <div class="circle left light-green"><strong>[currst]</strong></div>
-          </div>
-          <div class="column">
-            <div><strong>[prevdwe]</strong></div>
-            <div class="circle right light-green"><strong>[prevrst]</strong></div>
-          </div>
-        </td>
-      </tr>
-      <!-- Text Line -->
-      <tr>
-        <td>
-          Your <strong>Speed</strong> Score [spdscoredir]
-        </td>
-      </tr>
-      <!-- Circles -->
-      <tr>
-        <td class="columns">
-          <div class="column">
-            <div class="circle left [curspdscolor]"><strong>[curspdst]</strong></div>
-          </div>
-          <div class="column">
-            <div class="circle right [prevspdscolor]"><strong>[prevspdst]</strong></div>
-          </div>
-        </td> 
-      </tr>
-      <!-- Incident 1 -->
-      <tr>
-        <td>
-          % of Incidents <strong>75+ MPH</strong>
-        </td>
-      </tr>
-      <!-- Incident 1 Circles -->
-      <tr>
-        <td class="columns">
-          <div class="column">
-            <div class="circle left light-red">
-              <span style="text-align: center; line-height: 1.4; color: [curspdperc75mphcolor];">[curspdperc75mpht]<br>%</span>
-            </div>
-          </div>
-          <div class="column">
-            <div class="circle right light-red">
-              <span style="text-align: center; line-height: 1.2; color: [prevspdperc75mphcolor];">[prevspdperc75mpht]<br>%</span>
-            </div>
-          </div>
-        </td> 
-      </tr>
-      <!-- Incident 2 -->
-      <tr>
-        <td>
-          % of Incidents <strong>15+ MPH</strong> Over Limit
-        </td>
-      </tr>
-      <!-- Incident 2 Circles -->
-      <tr>
-        <td class="columns">
-          <div class="column">
-            <div class="circle left light-red">
-              <span style="text-align: center; line-height: 1.4; color: [curspdperc15mphcolor];">[curspdperc15mpht]<br>%</span>
-            </div>
-          </div>
-          <div class="column">
-            <div class="circle right light-red">
-              <span style="text-align: center; line-height: 1.2; color: [prevspdperc15mphcolor];">[prevspdperc15mpht]<br>%</span>
-            </div>
-          </div>
-        </td> 
-      </tr>
-      <!-- Text Line with Increased/Decreased -->
-      <tr>
-        <td>
-          Speeding Incident Count <strong>[spdinciddir]</strong>.
-        </td>
-      </tr>
-      <!-- Square Boxes -->
-      <tr>
-        <td class="columns">
-          <div class="column">
-            <div class="square left [curspdincidcolor]"><strong>[curspdincidt]</strong></div>
-          </div>
-          <div class="column">
-            <div class="square right [prevspdincidcolor]"><strong>[prevspdincidt]</strong></div>
-          </div>
-        </td>
-      </tr>
-      <!-- Text Line -->
-      <tr>
-        <td>
-          <p><strong>[speedactiont]</strong> your speeding incidents.</p>
-        </td>
-      </tr>
-      <!-- Button -->
-      <tr>
-        <td>
-          <a href="[formlink]" class="button">Request a Previous 4 Week Report</a>
-        </td>
-      </tr>
-      <tr style="margin-bottom: 10px;">
-        <td class="explanation">
-          <p style="margin: 4px;"><span style="color: red;">RED</span> - Danger Zone Lower your speed</p>
-          <p style="margin: 4px;"><span style="color: orange;">ORANGE</span> - Improvements needed</p>
-          <p style="margin: 4px;"><span style="color: green;">GREEN</span> - Thank you continue to drive down incidents count</p>
-        </td>
-      </tr>
-      <tr>
-        <td style="font-size: 12px; padding-top: 10px;">
-          Score 0 to 100 based on driver's performances higher score is better.
-        </td>
-      </tr>
-      <!-- Footer Text -->
-      <tr>
-        <td class="footer-text">
-          Powered by Accenga Inc. © 2024
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; padding: 20px 100px 20px 100px; border: 1px solid #dddddd;">
+            
+            <!-- Title -->
+            <tr>
+              <td align="center">
+                <h2 style="margin: 0; padding: 20px 0;">Weekly Risk Report</h2>
+              </td>
+            </tr>
+            
+            <!-- Greeting Line -->
+            <tr>
+              <td style="font-size: 18px; color: #333333; padding: 10px 0;">Hi [coname],</td>
+            </tr>
+
+            <!-- Risk Scores Line -->
+            <tr>
+              <td style="padding: 10px 0;">Your <strong>Risk</strong> Scores for Week Ending:</td>
+            </tr>
+
+            <!-- Two Column Section -->
+            <tr>
+              <td align="center">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td width="50%" align="center" style="padding: 10px 0;">
+                      <strong>[curdwe]</strong>
+                    </td>
+                    <td width="50%" align="center">
+                      <strong>[prevdwe]</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- Column 1 -->
+                    <td width="50%" align="center" style="padding: 10px 0;">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="104" height="104" cellpadding="0" cellspacing="0" border="0" style="background-color: [curscolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[currst]</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:104px;height:104px" arcsize="50%" fillcolor="[curscolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[currst]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                    
+                    <!-- Column 2 -->
+                    <td width="50%" align="center" style="padding: 10px 0;">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="80" height="80" cellpadding="0" cellspacing="0" border="0" style="background-color: [prevrscolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[prevrst]</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:80px;height:80px" arcsize="50%" fillcolor="[prevrscolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[prevrst]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Speed Score Section -->
+            <tr>
+              <td style="padding: 10px 0;">Your <strong>Speed</strong> Score [spdscoredir]</td>
+            </tr>
+
+            <!-- Circles Section -->
+            <tr>
+              <td align="center">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 10px 0;">
+                  <tr>
+                    <!-- Column 1 -->
+                    <td width="50%" align="center">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="104" height="104" cellpadding="0" cellspacing="0" border="0" style="background-color: [curspdscolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[curspdst]</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:104px;height:104px" arcsize="50%" fillcolor="[curspdscolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[curspdst]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                    
+                    <!-- Column 2 -->
+                    <td width="50%" align="center">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="80" height="80" cellpadding="0" cellspacing="0" border="0" style="background-color: [prevspdscolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[prevspdst]</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:80px;height:80px" arcsize="50%" fillcolor="[prevspdscolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[prevspdst]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Incident 1 Section -->
+            <tr>
+              <td style="padding: 10px 0;">% of Incidents <strong>75+ MPH</strong></td>
+            </tr>
+
+            <!-- Two Circles -->
+            <tr>
+              <td align="center">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 10px 0;">
+                  <tr>
+                    <!-- Circle 1 -->
+                    <td width="50%" align="center">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="104" height="104" cellpadding="0" cellspacing="0" border="0" style="background-color: [curspdperc75mphcolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[curspdperc75mpht]<br>%</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:104px;height:104px" arcsize="50%" fillcolor="[curspdperc75mphcolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[curspdperc75mpht]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                    
+                    <!-- Circle 2 -->
+                    <td width="50%" align="center">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="80" height="80" cellpadding="0" cellspacing="0" border="0" style="background-color: [prevspdperc75mphcolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[prevspdperc75mpht]<br>%</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:80px;height:80px" arcsize="50%" fillcolor="[prevspdperc75mphcolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[prevspdperc75mpht]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Incident 2 Section -->
+            <tr>
+              <td style="padding: 10px 0;">% of Incidents <strong>15+ MPH</strong> Over Limit</td>
+            </tr>
+
+            <!-- Two Circles -->
+            <tr>
+              <td align="center">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 10px 0;">
+                  <tr>
+                    <!-- Circle 1 -->
+                    <td width="50%" align="center">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="104" height="104" cellpadding="0" cellspacing="0" border="0" style="background-color: [curspdperc15mphcolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[curspdperc15mpht]<br>%</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:104px;height:104px" arcsize="50%" fillcolor="[curspdperc15mphcolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[curspdperc15mpht]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                    
+                    <!-- Circle 2 -->
+                    <td width="50%" align="center">
+                      <!-- Original Circle for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="80" height="80" cellpadding="0" cellspacing="0" border="0" style="background-color: [prevspdperc15mphcolor]; border-radius: 50%; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;">[prevspdperc15mpht]<br>%</td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Circle for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" style="width:80px;height:80px" arcsize="50%" fillcolor="[prevspdperc15mphcolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,0,0,0">
+                          <center style="font-size:20px; color:#FFFFFF;">[prevspdperc15mpht]</center>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Text Line with Increased/Decreased -->
+            <tr>
+              <td style="padding: 10px 0;">Speeding Incident Count <strong>[spdinciddir]</strong>.</td>
+            </tr>
+
+            <!-- Square Boxes -->
+            <tr>
+              <td align="center">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding: 10px 0;">
+                  <tr>
+                    <!-- Column 1 -->
+                    <td width="50%" align="center">
+                      <!-- Original Square Box for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="104" height="104" cellpadding="0" cellspacing="0" border="0" style="background-color: [curspdincidcolor]; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;"><strong>[curspdincidt]</strong></td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+
+                      <!-- Square Box for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:104px;height:104px;" fillcolor="[curspdincidcolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,30pt,0,0" style="text-align: center;">
+                          <center style="font-size:20px; color:#FFFFFF;"><strong>[curspdincidt]</strong></center>
+                        </v:textbox>
+                      </v:rect>
+                      <![endif]-->
+                    </td>
+                    
+                    <!-- Column 2 -->
+                    <td width="50%" align="center">
+                      <!-- Original Square Box for Modern Email Clients Only -->
+                      <!--[if !mso]><!-->
+                      <table width="80" height="80" cellpadding="0" cellspacing="0" border="0" style="background-color: [prevspdincidcolor]; border: 2px solid #FFFFFF; text-align: center;">
+                        <tr>
+                          <td style="font-size: 20px; color: #FFFFFF;"><strong>[prevspdincidt]</strong></td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+                      
+                      <!-- Square Box for Outlook using VML -->
+                      <!--[if mso]>
+                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:80px;height:80px;" fillcolor="[prevspdincidcolor]" strokecolor="#FFFFFF" strokeweight="2px">
+                        <v:textbox inset="0,21pt,0,0" style="text-align: center;">
+                          <center style="font-size:20px; color:#FFFFFF;"><strong>[prevspdincidt]</strong></center>
+                        </v:textbox>
+                      </v:rect>
+                      <![endif]-->
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Text Line -->
+            <tr>
+              <td>
+                <p><strong>[speedactiont]</strong> your speeding incidents.</p>
+              </td>
+            </tr>
+            
+            <!-- Button -->
+            <tr>
+              <td align="center" style="padding: 10px; width: 100%;">
+                <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+                  <tr>
+                    <td bgcolor="#4caf50" style="padding: 15px 55px; text-align: center; border-radius: 5px;">
+                      <a href="[formlink]" style="display: inline-block; color: #FFFFFF; text-decoration: none; font-size: 16px; font-family: Arial, sans-serif;">
+                        <strong>Request a Previous 4 Week Report</strong>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            
+            <!-- Explanation Section -->
+            <tr>
+              <td style="font-size: 12px; padding: 10px;border: 1px solid black;">
+                <p style="margin: 4px;"><span style="color: red;">RED</span> - Danger Zone Lower your speed</p>
+                <p style="margin: 4px;"><span style="color: orange;">ORANGE</span> - Improvements needed</p>
+                <p style="margin: 4px;"><span style="color: green;">GREEN</span> - Thank you continue to drive down incidents count</p>
+              </td>
+            </tr>
+
+            <!-- Footer Text -->
+            <tr>
+              <td align="center" style="font-size: 12px; color: #999999; padding: 20px 0;">
+                Powered by Accenga Inc. © 2024
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
